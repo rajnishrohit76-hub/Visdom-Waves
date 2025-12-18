@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ================= Navbar Container ================= */
 .navbar {
   display: flex;
@@ -96,4 +97,46 @@
     width: 100%;
     justify-content: flex-start;
   }
+=======
+/* Landing-video.css */
+.homepage-landingvideo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.85)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> e6ee54f4ff725fff7f6315ebb9808e849efb1f4d
 }
+
+/* Visdom Waves Video */
+.homepage-visdomwaves-video{
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240919/pngtree-a-background-of-orange-blue-and-yellow-gradients-with-gritty-appearance-image_16233934.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mute Button */
+.mute-toggle-btn {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.mute-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-1px);
+}
+
+/* */
