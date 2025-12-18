@@ -17,7 +17,7 @@ function HomeVideo() {
       <section className="relative h-screen w-full overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/landingVideo/landingPage.mp4"
+          src="/home/landingVideo/landingPage.mp4"
           autoPlay
           loop
           muted
@@ -35,7 +35,7 @@ function HomeVideo() {
               AI-Enhanced Learning for the 21st Century
             </h1>
 
-            <p className="text-[clamp(1rem,2.5vw,1.25rem)] text-neutral-300 max-w-[720px] mt-50 mx-auto">
+            <p className="text-[clamp(1rem,2.5vw,1.25rem)] text-neutral-300 max-w-full mx-auto">
               Journey into a New Learning Era — embrace our voice-interactive
               AI platform for a smarter, brighter educational future.
             </p>
@@ -50,7 +50,7 @@ function HomeVideo() {
             <video
               id="motivationVideo"
               className="w-full object-cover"
-              src="/landingVideo/VisdomWaves.mp4"
+              src="/home/landingVideo/VisdomWaves.mp4"
               autoPlay
               loop
               muted
@@ -60,7 +60,7 @@ function HomeVideo() {
             {/* Mute Button */}
             <button
               onClick={toggleMute}
-              className="mute-toggle-btn"
+              className="homepage-visdomwaves-video-mute-btn"
               aria-label="Toggle audio"
             >
               {isMuted ? "🔊 Unmute" : "🔇 Mute"}

@@ -25,7 +25,7 @@
 }
 
 /* Home Page Visdom Waves Video Mute Button  */
-.mute-toggle-btn {
+.homepage-visdomwaves-video-mute-btn {
   position: absolute;
   bottom: 1.25rem;
   right: 1.25rem;
@@ -38,7 +38,262 @@
   transition: all 0.2s ease;
 }
 
-.mute-toggle-btn:hover {
+.homepage-visdomwaves-video-mute-btn:hover {
   background: rgba(0, 0, 0, 0.85);
   transform: translateY(-1px);
 }
+
+/* =============== Leader's Voice Section ======================== */
+.homepage-leaderVoice-section{
+  background-image: url('https://t4.ftcdn.net/jpg/05/71/83/47/240_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg');
+}
+
+.homepage-leaderVoice-background{
+  background: black;
+}
+
+.homepage-leaderVoice-video{
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+/*============ MultilingualFuture.css ===================== */
+
+/* Keyframes for horizontal scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Container for scrolling gallery */
+.homepage-multilingualImage-animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+/* Each image in the gallery */
+.homepage-multilingualImage-animate-scroll img {
+  margin-right: 1.5rem; 
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  width: 16rem;
+  height: 10rem;
+}
+
+/* Optional: responsive sizes */
+@media (min-width: 640px) {
+  .homepage-multilingualImage-animate-scroll img {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage-multilingualImage-animate-scroll img {
+    height: 14rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .homepage-multilingualImage-animate-scroll img {
+    height: 16rem;
+  }
+}
+
+/* ===================== Board Section ============== */
+.homepage-boardAndClass-Section{
+   background-image: url('https://t3.ftcdn.net/jpg/16/24/98/84/240_F_1624988417_NwkP9BuPsnZlcKKYAba0BFpWz3VJPtYY.jpg');
+}
+
+/* Board Item Styling */
+.homepage-board-item {
+  min-width: 140px;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #334155;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.homepage-board-item:hover {
+  background-color: #e0f2fe;
+  color: #0ea5e9; 
+}
+
+/* Class Item */
+.homepage-class-item {
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.homepage-class-item:hover {
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  transform: translateY(-0.25rem);
+}
+.homepage-class-item h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+.homepage-class-item button {
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  transition: background 0.3s ease;
+}
+.homepage-class-item button:hover {
+  background-color: #0284c7; 
+}
+
+/* Course Card Styling */
+.homepage-course-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.homepage-course-card h3{
+  color: white;
+  text-align: center;
+  font-weight: 800;
+}
+
+.homepage-course-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-0.25rem);
+}
+.homepage-course-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.homepage-course-card .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.homepage-course-card:hover .overlay {
+  opacity: 1;
+}
+.homepage-course-card .overlay button {
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  transition: background 0.3s ease;
+}
+.homepage-course-card .overlay button:hover {
+  background-color: #0284c7; /* sky-700 */
+}
+.course-cardhomepage-course-card h3 {
+  padding: 0.5rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .class-item h3 { font-size: 1rem; }
+  .class-item button { font-size: 0.875rem; }
+  .course-card img { height: 14rem; }
+  .course-card .overlay button { font-size: 0.875rem; }
+}
+@media (min-width: 768px) {
+  .class-item h3 { font-size: 1.125rem; }
+  .class-item button { font-size: 1rem; }
+  .course-card img { height: 15rem; }
+  .course-card h3 { font-size: 1.125rem; }
+}
+@media (min-width: 1024px) {
+  .class-item h3 { font-size: 1.25rem; }
+  .class-item button { font-size: 1.125rem; }
+  .course-card img { height: 15rem; }
+  .course-card h3 { font-size: 1.25rem; }
+}
+
+
+/* ================ Student Lover Section ========================  */
+.homePage-studentlove-section {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('https://t4.ftcdn.net/jpg/01/59/36/13/240_F_159361310_b45IDWsgcizXh3gzRI3SRmZyljJVG3eh.jpghttps://t3.ftcdn.net/jpg/06/24/90/56/240_F_624905687_6jgMrzI78toEYK9Vkp0rB5u2hOKJQXR3.jpg')
+      no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+/* =============== Parent Trusted Section ================== */
+.homepage-parent-trust-section{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('https://t4.ftcdn.net/jpg/01/59/36/13/240_F_159361310_b45IDWsgcizXh3gzRI3SRmZyljJVG3eh.jpg')
+      no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+/* ====================== Platform Trusted Jsx ===================== */
+.homepage-trusted-partner-section {
+  background: url('https://t4.ftcdn.net/jpg/06/93/58/53/240_F_693585364_7GrlZV8O6xja556CTfeHvSTWgZwW0Wmd.jpg') center/cover no-repeat;
+}
+
+.trusted-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 0;
+}
+
+
+/*================= Our Partners =================== */
+@keyframes partners-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-partners-marquee {
+  animation: partners-marquee 25s linear infinite;
+}
+
+

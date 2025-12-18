@@ -1,13 +1,18 @@
 import React from 'react'
-import LeaderVoice from './leaderVoice';
-import MultilingualFeature from './multilingualFeature';
-import StudentLove from './studentLove';
-import ParentTrust from './parentTrust';
-import TrustedPartners from './trustedPartners';
-import Footer from './footer';
+import '../cssCode/homePage.css'
+
 import HomeVideo from './HomeVideo';
-import '../cssCode/HomePage.css'
+import LeaderVoice from './LeaderVoice';
+
+import ParentTrust from './parentTrust';
+
+import Footer from './footer';
+
 import BoardSection from './BoardSection';
+import StudentLove from './StudentLove';
+import PlatformTrusted from './PlatformTrusted';
+import OurPartner from './OurPartner';
+import MultilingualFuture from './multilingualFeature';
 
 function HomePage() {
   return (
@@ -21,7 +26,7 @@ function HomePage() {
       </section>
 
       <section>
-        <MultilingualFeature />
+        <MultilingualFuture />
       </section>
 
       <section>
@@ -37,7 +42,11 @@ function HomePage() {
       </section>
 
       <section>
-        <TrustedPartners />
+        <PlatformTrusted />
+      </section>
+
+      <section>
+        <OurPartner />
       </section>
 
       <section>

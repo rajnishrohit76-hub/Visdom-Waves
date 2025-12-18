@@ -26,21 +26,21 @@ function Navbar() {
             {/* Desktop Menu */}
             <ul className="hidden md:flex items-center gap-6">
               <li>
-                <Link to="/parent" className="text-white font-medium hover:text-yellow-400 transition-colors">Parents</Link>
+                <Link to="/parent" className="text-white font-medium hover:text-yellow-400 hover:underline transition-colors">Parents</Link>
               </li>
               <li>
-                <Link to="/patent" className="text-white font-medium hover:text-yellow-400 transition-colors">Patents</Link>
+                <Link to="/patent" className="text-white font-medium hover:text-yellow-400 hover:underline transition-colors">Patents</Link>
               </li>
               <li>
-                <Link to="/student" className="text-white font-medium hover:text-yellow-400 transition-colors">Students</Link>
+                <Link to="/student" className="text-white font-medium hover:text-yellow-400 hover:underline transition-colors">Students</Link>
               </li>
              
               <li>
-                <Link to="/contact" className="text-white font-medium hover:text-yellow-400 transition-colors">Contact</Link>
+                <Link to="/contact" className="text-white font-medium hover:text-yellow-400 hover:underline transition-colors">Contact</Link>
               </li>
 
               <li>
-                <Link to="/dashboard" className="text-white font-medium hover:text-yellow-400 transition-colors">Dashboard</Link>
+                <Link to="/dashboard" className="text-white font-medium hover:text-yellow-400 hover:underline transition-colors">Dashboard</Link>
               </li>
               <li>
                 <select className="bg-black bg-opacity-30 text-white font-medium rounded px-2 py-1 cursor-pointer outline-none">
