@@ -1,0 +1,44 @@
+.greeting-card {
+  flex: 1;
+  /* background: #0f0f0f; */
+  color: white;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  /* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 20px;
+  /* background: linear-gradient(120deg, #ff9800, #ff5722, #2196f3); */
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.dashboard-greeting {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.username {
+  font-size: 2.6rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-subtitle {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #ddd;
+}

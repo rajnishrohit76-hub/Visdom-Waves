@@ -96,7 +96,7 @@ function BoardSection() {
       {/* Boards Section */}
       <section className="px-4 sm:px-6 lg:px-12 py-10 bg-slate-50">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">
-          Choose Your Board
+          Visdom Waves Supports All the Boards
         </h2>
         <div
           ref={boardsRef}
@@ -105,10 +105,10 @@ function BoardSection() {
           {boardItems}
         </div>
 
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-2 sm:mb-4">
-          Choose Your Class
+        <h2 className="text-xl text-center sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-2 sm:mb-4">
+          All Classes Available Here
         </h2>
-        <p className="text-xs sm:text-sm md:text-base text-slate-600 mb-6 sm:mb-8 max-w-full sm:max-w-2xl">
+        <p className="text-xs text-center sm:text-sm md:text-base text-slate-600 mb-6 sm:mb-8 max-w-full ">
           Get access to notes, videos, worksheets, and quizzes for your class.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">

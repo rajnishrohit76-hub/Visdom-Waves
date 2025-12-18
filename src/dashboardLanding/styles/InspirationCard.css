@@ -1,0 +1,133 @@
+/* MAIN CONTAINER */
+.inspiration-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* QUOTE SECTION */
+.quote-section {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.daily-title {
+  color: #5b2ccf;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.quote-text {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: white;
+  max-width: 900px;
+  margin: auto;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.quote-author {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white;
+  text-align: right;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* MUTE BUTTON */
+.mute-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* VIDEO TITLE */
+.video-title {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+/* CAROUSEL */
+.carousel-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VIDEO BORDER */
+.video-border {
+  width: 100%;
+  border: 3px solid white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-video {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2.2rem;
+  color: #5b2ccf;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.2s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-btn:hover {
+  background: white;
+}
+
+.nav-btn.left {
+  left: -40px; /* Outside video border */
+}
+
+.nav-btn.right {
+  right: -40px; /* Outside video border */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-btn {
+    font-size: 1.8rem;
+    padding: 4px 10px;
+  }
+
+  .nav-btn.left {
+    left: -25px;
+  }
+
+  .nav-btn.right {
+    right: -25px;
+  }
+}
