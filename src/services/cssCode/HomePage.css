@@ -1,15 +1,99 @@
-/* landing-video.css */
-.homepage-landingvideo-overlay {
-  position: relative;
-  z-index: 10;
+/* ================= Navbar Container ================= */
+.navbar {
   display: flex;
-  height: 100%;
-  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 16px 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.65)
-  );
+/* ================= Logo ================= */
+.navbar-logo a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  color: gold;
+}
+
+/* ================= Menu ================= */
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Menu Items */
+.navbar-item {}
+
+/* Links */
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-link:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* Account Dropdown */
+.navbar-link select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+.navbar-link select option {
+  color: black;
+}
+
+/* Search Icon */
+.navbar-link svg {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ================= Responsive ================= */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navbar-link {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
