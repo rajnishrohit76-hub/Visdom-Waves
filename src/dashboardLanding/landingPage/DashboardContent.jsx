@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import InspirationCard from "./InspirationCard";
 import Greetings from "./Greetings"
-import "../Styles/DashBoardContent.css";
+
+import "../dashboardCssCode/Dashboard.css"
 
 import TodayNews from "./TodayNews"
 import TodayActivities from "./TodayActivities";

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import "../Styles/TodayActivities.css";
 
 function TodayActivities() {
+  // -------------------
+  // States
+  // -------------------
   const [activeTodayTab, setActiveTodayTab] = useState("india");
   const [activeActivityTab, setActiveActivityTab] = useState("sports");
 
+  // -------------------
+  // Content Data
+  // -------------------
   const todayContent = {
     india:
       "On this day in India, several historical events took place that shaped the nation’s culture, politics, and heritage.",
@@ -25,60 +30,91 @@ function TodayActivities() {
     ],
   };
 
+  // -------------------
+  // Buttons Mapping
+  // -------------------
+  const todayTabs = [
+    { key: "india", label: "India" },
+    { key: "world", label: "World" },
+  ];
+
+  const activityTabs = [
+    { key: "sports", label: "Sports" },
+    { key: "events", label: "Events" },
+  ];
+
+  const renderTodayButtons = todayTabs.map((tab) => (
+    <button
+      key={tab.key}
+      onClick={() => setActiveTodayTab(tab.key)}
+      className={`px-4 sm:px-5 py-2 rounded-full font-semibold transition-transform transform hover:scale-105 ${
+        activeTodayTab === tab.key
+          ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg"
+          : "bg-white text-black hover:bg-purple-500 hover:text-white"
+      }`}
+    >
+      {tab.label}
+    </button>
+  ));
+
+  const renderActivityButtons = activityTabs.map((tab) => (
+    <button
+      key={tab.key}
+      onClick={() => setActiveActivityTab(tab.key)}
+      className={`px-4 sm:px-5 py-2 rounded-full font-semibold transition-transform transform hover:scale-105 ${
+        activeActivityTab === tab.key
+          ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg"
+          : "bg-white text-black hover:bg-purple-500 hover:text-white"
+      }`}
+    >
+      {tab.label}
+    </button>
+  ));
+
+  const renderActivityList = activitiesContent[activeActivityTab].map((item, idx) => (
+    <li
+      key={idx}
+      className="p-3 rounded-xl hover:bg-white/20 transition duration-300 shadow-sm text-sm sm:text-base"
+    >
+      {item}
+    </li>
+  ));
+
+  // -------------------
+  // JSX
+  // -------------------
   return (
-    <div className="today-activities-container">
-      {/* About Today Card */}
-      <div className="know-border today-card">
-        <div className="know-box">
-          <div className="know-header">
-            <h3>Know about Today</h3>
-            <div className="tab-buttons">
-              <button
-                className={`tab-btn ${activeTodayTab === "india" ? "active" : ""}`}
-                onClick={() => setActiveTodayTab("india")}
-              >
-                India
-              </button>
-              <button
-                className={`tab-btn ${activeTodayTab === "world" ? "active" : ""}`}
-                onClick={() => setActiveTodayTab("world")}
-              >
-                World
-              </button>
-            </div>
+    <div className="min-h-screen p-4 sm:p-6 md:p-8 flex flex-col space-y-8">
+      {/* Today Card */}
+      <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl shadow-2xl hover:scale-105 transform transition duration-500 overflow-hidden">
+        <div className="h-2 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 animate-pulse"></div>
+        <div className="p-4 sm:p-6 flex flex-col space-y-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-3 sm:space-y-0">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400">
+              Know about Today
+            </h3>
+            <div className="flex space-x-3">{renderTodayButtons}</div>
           </div>
-          <p className="know-text">{todayContent[activeTodayTab]}</p>
+          <p className="text-white text-sm sm:text-lg">{todayContent[activeTodayTab]}</p>
+          <div className="mt-4 sm:mt-6 h-1 w-24 sm:w-32 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 rounded-full animate-pulse"></div>
         </div>
       </div>
 
       {/* Activities Card */}
-      <div className="activity-border today-card">
-        <div className="activity-box">
-          <div className="activity-header">
+      <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl shadow-2xl hover:scale-105 transform transition duration-500 overflow-hidden">
+        <div className="h-2 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 animate-pulse"></div>
+        <div className="p-4 sm:p-6 flex flex-col space-y-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-3 sm:space-y-0">
             <div>
-              <h3>Activities</h3>
-              <p className="sub-title">(What Happened Today)</p>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400">
+                Activities
+              </h3>
+              <p className="text-white text-xs sm:text-sm">(What Happened Today)</p>
             </div>
-            <div className="tab-buttons">
-              <button
-                className={`tab-btn ${activeActivityTab === "sports" ? "active" : ""}`}
-                onClick={() => setActiveActivityTab("sports")}
-              >
-                Sports
-              </button>
-              <button
-                className={`tab-btn ${activeActivityTab === "events" ? "active" : ""}`}
-                onClick={() => setActiveActivityTab("events")}
-              >
-                Events
-              </button>
-            </div>
+            <div className="flex space-x-3">{renderActivityButtons}</div>
           </div>
-          <ul className="activity-list">
-            {activitiesContent[activeActivityTab].map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+          <ul className="list-disc list-inside text-white space-y-2">{renderActivityList}</ul>
+          <div className="mt-4 sm:mt-6 h-1 w-24 sm:w-32 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 rounded-full animate-pulse"></div>
         </div>
       </div>
     </div>
